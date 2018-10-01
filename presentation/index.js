@@ -17,6 +17,10 @@ import {
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
+import WSBOne from "../assets/wsb-screenshot-1.png";
+import WSBTwo from "../assets/wsb-screenshot-2.png";
+import LifeWayIT from "../assets/lifewayit.png";
+
 // Require CSS
 require("normalize.css");
 
@@ -34,14 +38,50 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="secondary">
-            Spectacle Boilerplate
+            Building Simple, Scalable, Serverless Applications
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            open the presentation/index.js file to get started
+            https://github.com/kevinold/citn2018-serverless-workshop-demo
           </Text>
         </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+            About Me
+          </Heading>
+          <List>
+            <ListItem> White House, TN</ListItem>
+            <ListItem> Married 16 years</ListItem>
+            <ListItem> 2 Boys - 7yo, 2.5yo</ListItem>
+            <ListItem> Front End Architect, LifeWay</ListItem>
+            <ListItem> Remote Work</ListItem>
+            <ListItem> Love Craft Coffee </ListItem>
+          </List>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgImage={LifeWayIT} />
+        <Slide transition={["zoom"]} bgImage={WSBOne} />
+        <Slide transition={["zoom"]} bgImage={WSBTwo} />
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>Agenda</Heading>
+          <List>
+            <ListItem> AWS Lambda / Serverless 101 </ListItem>
+            <ListItem> Lab: Hello World </ListItem>
+            <ListItem> Lab: Simple HTTP </ListItem>
+            <ListItem> Lab: File Conversion </ListItem>
+            <ListItem> Lab: REST API </ListItem>
+            <ListItem> Lab: Serverless GraphQL </ListItem>
+            <ListItem> Lab: Crontab </ListItem>
+            <ListItem> Tips and Tricks / Questions </ListItem>
+          </List>
+        </Slide>
+
+
+
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
           <Heading size={1} textColor="secondary">Heading 1</Heading>
