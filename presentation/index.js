@@ -13,6 +13,8 @@ import {
   Slide,
   Text,
   Image,
+  Fill,
+  Appear,
 } from "spectacle";
 
 // Import theme
@@ -21,6 +23,7 @@ import createTheme from "spectacle/lib/themes/default";
 import WSBOne from "../assets/wsb-screenshot-1.png";
 import WSBTwo from "../assets/wsb-screenshot-2.png";
 import LifeWayIT from "../assets/lifewayit.png";
+import FaithLeadsTech from "../assets/faithleadstech.png";
 
 // Require CSS
 require("normalize.css");
@@ -99,31 +102,63 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-
-
-        <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={6} textColor="primary" caps>Typography</Heading>
-          <Heading size={1} textColor="secondary">Heading 1</Heading>
-          <Heading size={2} textColor="secondary">Heading 2</Heading>
-          <Heading size={3} textColor="secondary">Heading 3</Heading>
-          <Heading size={4} textColor="secondary">Heading 4</Heading>
-          <Heading size={5} textColor="secondary">Heading 5</Heading>
-          <Text size={6} textColor="secondary">Standard text</Text>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Serverless?
+          </Heading>
         </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Function as a Service (FaaS)
+          </Heading>
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-          <Heading size={6} textColor="secondary" caps>Standard List</Heading>
-          <List>
-            <ListItem>Item 1</ListItem>
-            <ListItem>Item 2</ListItem>
-            <ListItem>Item 3</ListItem>
-            <ListItem>Item 4</ListItem>
+          <Heading size={6} textColor="secondary" caps>
+            Principles of a Serverless Architecture
+          </Heading>
+          <Fill>
+          <List style={{ "list-style-type": "none" }}>
+            <Appear>
+            <ListItem> Use a compute service to execute code on demand </ListItem>
+            </Appear>
+            <Appear>
+            <ListItem> Write single-purpose stateless functions </ListItem>
+            </Appear>
+            <Appear>
+            <ListItem> Design push-based, event-driven pipelines </ListItem>
+            </Appear>
+            <Appear>
+            <ListItem> Create thicker, more powerful front ends </ListItem>
+            </Appear>
+            <Appear>
+            <ListItem> Embrace third party services </ListItem>
+            </Appear>
           </List>
+          </Fill>
         </Slide>
-        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-          <BlockQuote>
-            <Quote>Example Quote</Quote>
-            <Cite>Author</Cite>
-          </BlockQuote>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Demo / Lab(s)
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Image src={FaithLeadsTech} height="600px"/>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
+            Thanks!
+          </Heading>
+          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+            @kevinold
+          </Text>
+          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+            kevin.old@lifeway.com
+          </Text>
         </Slide>
       </Deck>
     );
