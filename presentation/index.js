@@ -11,7 +11,8 @@ import {
   List,
   Quote,
   Slide,
-  Text
+  Text,
+  Image,
 } from "spectacle";
 
 // Import theme
@@ -40,7 +41,7 @@ export default class Presentation extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
 
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={1} caps lineHeight={1} textColor="secondary">
             Building Simple, Scalable, Serverless Applications
           </Heading>
           <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
@@ -62,9 +63,27 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
-        <Slide transition={["zoom"]} bgImage={LifeWayIT} />
+        <Slide transition={["zoom"]}>
+          <Image src={LifeWayIT} width="800px"/>
+        </Slide>
         <Slide transition={["zoom"]} bgImage={WSBOne} />
         <Slide transition={["zoom"]} bgImage={WSBTwo} />
+
+        <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
+          <Heading size={6} textColor="secondary" caps>app.wordsearchbible.com</Heading>
+          <Heading size={6} textColor="secondary" caps>REDEMPTION CODE: DCB3JNZTAM</Heading>
+          <List>
+            <ListItem> 6 Bibles </ListItem>
+            <ListItem> 33 Commentaries </ListItem>
+            <ListItem> 7 Devotionals </ListItem>
+            <ListItem> 3 Dictionaries </ListItem>
+            <ListItem> 3 Handbooks </ListItem>
+            <ListItem> 5 Maps, Atlases, Photos, Illustrations </ListItem>
+            <ListItem> 17 Sermon Helps </ListItem>
+            <ListItem> 13 Expositions </ListItem>
+            <ListItem> .... 150 pieces of content </ListItem>
+          </List>
+        </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Agenda</Heading>
