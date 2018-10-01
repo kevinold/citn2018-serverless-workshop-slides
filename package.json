@@ -1,7 +1,7 @@
 {
-  "name": "spectacle-boilerplate",
+  "name": "citn2018-serverless-workshop-slides",
   "version": "1.0.1",
-  "description": "ReactJS Powered Presentation Framework",
+  "description": "CITN 2018 Serverless Workshop Slides",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf dist",
