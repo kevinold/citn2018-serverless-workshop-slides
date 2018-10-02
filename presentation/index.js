@@ -18,6 +18,8 @@ import {
   Link
 } from "spectacle";
 
+import CodeSlide from "spectacle-code-slide";
+
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
@@ -30,11 +32,16 @@ import ServerlessFramework from "../assets/serverlessframework.png";
 // Require CSS
 require("normalize.css");
 
+const colors = {
+	background: '#282C34',
+	foreground: '#CFD8E6'
+};
+
 const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#03A9FC",
-  quaternary: "#CECECE"
+  primary: colors.background,
+	secondary: colors.foreground,
+	tertiary: colors.foreground,
+	quarternary: colors.foreground
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -43,7 +50,7 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme} progress="none">
 
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} caps lineHeight={1} textColor="secondary">
@@ -71,8 +78,13 @@ export default class Presentation extends React.Component {
         <Slide transition={["zoom"]}>
           <Image src={LifeWayIT} width="800px"/>
         </Slide>
-        <Slide transition={["zoom"]} bgImage={WSBOne} />
-        <Slide transition={["zoom"]} bgImage={WSBTwo} />
+        <Slide transition={["zoom"]}>
+          <Heading size={6} textColor="secondary" caps>app.wordsearchbible.com</Heading>
+          <Image src={WSBOne} width="1000px"/>
+        </Slide>
+        <Slide transition={["zoom"]}>
+          <Image src={WSBTwo} width="1000px"/>
+        </Slide>
 
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>app.wordsearchbible.com</Heading>
@@ -90,16 +102,16 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
 
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Image src={FaithLeadsTech} height="600px"/>
+        </Slide>
+
         <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
           <Heading size={6} textColor="secondary" caps>Agenda</Heading>
           <List>
             <ListItem> AWS Lambda / Serverless 101 </ListItem>
-            <ListItem> Lab: Hello World </ListItem>
-            <ListItem> Lab: Simple HTTP </ListItem>
-            <ListItem> Lab: File Conversion </ListItem>
-            <ListItem> Lab: REST API </ListItem>
-            <ListItem> Lab: Serverless GraphQL </ListItem>
-            <ListItem> Lab: Crontab </ListItem>
+            <ListItem> Labs </ListItem>
+            <ListItem> Serverless GraphQL </ListItem>
             <ListItem> Tips and Tricks / Questions </ListItem>
           </List>
         </Slide>
@@ -145,6 +157,7 @@ export default class Presentation extends React.Component {
           <Image src={ServerlessFramework} />
         </Slide>
 
+
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} caps lineHeight={1} textColor="secondary">
             Demo / Lab(s)
@@ -172,14 +185,10 @@ export default class Presentation extends React.Component {
 
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={2} caps lineHeight={1} textColor="secondary">
-            Demo - GraphQL via AWS AppSync
+            Demo - GraphQL via AWS AppSync / Amplify
           </Heading>
           <Link href="https://console.aws.amazon.com/appsync/home" target="_blank">AWS AppSync</Link>
           <Link href="https://aws-amplify.github.io/" target="_blank">AWS Amplify</Link>
-        </Slide>
-
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Image src={FaithLeadsTech} height="600px"/>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="primary">
