@@ -15,6 +15,7 @@ import {
   Image,
   Fill,
   Appear,
+  Link
 } from "spectacle";
 
 // Import theme
@@ -143,6 +144,32 @@ export default class Presentation extends React.Component {
           <Heading size={1} caps lineHeight={1} textColor="secondary">
             Demo / Lab(s)
           </Heading>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={2} caps lineHeight={1} textColor="secondary">
+            Demo - Hello World
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={2} caps lineHeight={1} textColor="secondary">
+            Demo - Simple HTTP
+          </Heading>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={2} caps lineHeight={1} textColor="secondary">
+            Demo - Crontab (Daily Menu)
+          </Heading>
+          <Link href="https://www.homecafebg.com/2018/09/9-21-9-22-weekend-specials/" target="_blank">Home Cafe Menu</Link>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={2} caps lineHeight={1} textColor="secondary">
+            Demo - GraphQL via AWS AppSync
+          </Heading>
+          <Link href="https://aws.amazon.com/appsync/" target="_blank">AWS AppSync</Link>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="primary">
