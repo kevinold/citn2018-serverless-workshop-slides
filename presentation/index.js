@@ -25,6 +25,7 @@ import WSBOne from "../assets/wsb-screenshot-1.png";
 import WSBTwo from "../assets/wsb-screenshot-2.png";
 import LifeWayIT from "../assets/lifewayit.png";
 import FaithLeadsTech from "../assets/faithleadstech.png";
+import ServerlessFramework from "../assets/serverlessframework.png";
 
 // Require CSS
 require("normalize.css");
@@ -138,6 +139,10 @@ export default class Presentation extends React.Component {
             </Appear>
           </List>
           </Fill>
+        </Slide>
+
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Image src={ServerlessFramework} />
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="primary">
