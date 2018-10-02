@@ -169,7 +169,8 @@ export default class Presentation extends React.Component {
           <Heading size={2} caps lineHeight={1} textColor="secondary">
             Demo - GraphQL via AWS AppSync
           </Heading>
-          <Link href="https://aws.amazon.com/appsync/" target="_blank">AWS AppSync</Link>
+          <Link href="https://console.aws.amazon.com/appsync/home" target="_blank">AWS AppSync</Link>
+          <Link href="https://aws-amplify.github.io/" target="_blank">AWS Amplify</Link>
         </Slide>
 
         <Slide transition={["zoom"]} bgColor="primary">
